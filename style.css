@@ -1,0 +1,243 @@
+/* 全体のリセットと基本定義 */
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+        
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'M PLUS Rounded 1c', 'Nunito', sans-serif;
+            color: #2d3748;
+            background-color: #f0fdf4; /* 爽やかなごく薄いミントグリーン */
+            line-height: 1.8;
+        }
+
+        /* [余白][ページ内容][余白] を実現する中央寄せコンテナ */
+        .site-wrapper {
+            max-width: 960px;
+            margin: 40px auto; /* 上下に40px、左右は自動で余白を確保 */
+            padding: 0 20px;   /* 画面が狭いときの最小限のクッション */
+        }
+
+        /* メインの白い紙（ページ本体） */
+        .main-page {
+            background-color: #ffffff;
+            border-radius: 24px;
+            box-shadow: 0 10px 30px rgba(76, 29, 149, 0.05); /* 柔らかな紫の影 */
+            overflow: hidden;
+            border: 1px solid #e2e8f0;
+            padding-bottom: 40px;
+        }
+
+        /* ヘッダーエリア（見切れ防止を施したポップなグラデーション） */
+        .header-banner {
+            padding: 60px 40px;
+            background: linear-gradient(135deg, #ccfbf1 0%, #f3e8ff 100%);
+            border-bottom: 4px dashed #6ee7b7;
+            text-align: center;
+        }
+
+        .header-banner h1 {
+            margin: 0;
+            font-size: 32px;
+            font-weight: 800;
+            color: #4c1d95;
+            letter-spacing: 2px;
+            line-height: 1.2;
+        }
+
+        .header-banner p {
+            margin: 12px 0 0 0;
+            font-size: 16px;
+            color: #6b21a8;
+            font-weight: 700;
+        }
+
+        /* コンテンツ内のパディング設定 */
+        .content-body {
+            padding: 40px;
+        }
+
+        /* 見出しデザイン（左アクセントライン） */
+        h2 {
+            font-size: 22px;
+            color: #4c1d95;
+            border-left: 6px solid #6ee7b7;
+            padding-left: 12px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+
+        h2:first-of-type {
+            margin-top: 0;
+        }
+
+        h3 {
+            font-size: 16px;
+            color: #1e3a8a;
+            margin-top: 24px;
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+
+        p {
+            margin: 0 0 16px 0;
+            font-size: 15px;
+        }
+
+        /* 自己紹介カード */
+        .profile-card {
+            background-color: #fdf2f8; /* ほんのりピンク */
+            border-radius: 16px;
+            padding: 24px;
+            border: 1px solid #fbcfe8;
+            margin-bottom: 30px;
+        }
+
+        /* スキルの並び（テーブルレイアウトによる横並び崩れ防止） */
+        .skills-container {
+            display: table;
+            width: 100%;
+            border-spacing: 15px 0;
+            margin: 0 -15px 30px -15px;
+        }
+
+        .skill-box {
+            display: table-cell;
+            background-color: #f8fafc;
+            padding: 20px;
+            border-radius: 16px;
+            border: 1px solid #e2e8f0;
+            width: 33.333%;
+            vertical-align: top;
+        }
+
+        .skill-box h4 {
+            margin: 0 0 12px 0;
+            font-size: 15px;
+            color: #b45309;
+            font-weight: 700;
+            border-bottom: 2px solid #fef3c7;
+            padding-bottom: 6px;
+        }
+
+        /* タグスタイル */
+        .tag {
+            display: inline-block;
+            background-color: #e2e8f0;
+            color: #334155;
+            padding: 4px 10px;
+            border-radius: 8px;
+            font-size: 13px;
+            margin: 4px;
+            font-weight: 700;
+        }
+        
+        .tag-primary {
+            background-color: #e0f2fe;
+            color: #0369a1;
+        }
+
+        /* 制作物カード（メインコンテンツ） */
+        .project-card {
+            background-color: #ffffff;
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 35px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+        }
+        .project-header {
+            border-bottom: 2px solid #f3e8ff;
+            padding-bottom: 12px;
+            margin-bottom: 20px;
+        }
+
+        .project-title {
+            font-size: 20px;
+            font-weight: 800;
+            color: #6b21a8;
+            margin: 0;
+        }
+
+        .project-meta {
+            font-size: 13px;
+            color: #6b7280;
+            margin-top: 6px;
+        }
+
+        .project-meta span {
+            margin-right: 20px;
+        }
+
+        .tech-stack {
+            margin: 15px 0;
+        }
+
+        /* 動画・写真ギャラリー枠 */
+        .media-area {
+            background-color: #fffbeb;
+            border: 2px dashed #fcd34d;
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            margin-top: 20px;
+            color: #b45309;
+        }
+
+        .media-area i {
+            font-size: 24px;
+            margin-bottom: 8px;
+            color: #d97706;
+        }
+
+        .media-title {
+            font-weight: 700;
+            font-size: 14px;
+            margin-bottom: 4px;
+        }
+
+        .media-desc {
+            font-size: 12px;
+            color: #78350f;
+        }
+
+        ul {
+            margin: 0 0 16px 0;
+            padding-left: 24px;
+        }
+
+        li {
+            margin-bottom: 6px;
+            font-size: 15px;
+        }
+
+        .badge-award {
+            background-color: #fef3c7;
+            color: #d97706;
+            padding: 2px 8px;
+            border-radius: 6px;
+            font-size: 12px;
+            font-weight: 800;
+            margin-left: 10px;
+            border: 1px solid #fcd34d;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        /* 連絡先フッター */
+        .contact-section {
+            background: linear-gradient(135deg, #fef3c7 0%, #fdf2f8 100%);
+            border-radius: 16px;
+            padding: 30px;
+            text-align: center;
+            margin-top: 40px;
+            border: 1px solid #fbcfe8;
+        }
+
+        .contact-section p {
+            margin: 6px 0;
+            font-weight: 700;
+            font-size: 15px;
+        }
