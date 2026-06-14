@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>渡邊佳菜美 | ポートフォリオ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700;800&family=Nunito:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">    
+</head>
+
+<body>
+
+    <div class="site-wrapper">
+        <div class="main-page">
+            
+            <!-- 上部見切れ対策済みのヘッダー -->
+            <div class="header-banner">
+                <h1>KANAMI WATANABE</h1>
+                <p>PORTFOLIO SITE</p>
+            </div>
+
+            <div class="content-body">
+                
+                <!-- 自己紹介 -->
+                <h2>About Me <span style="font-size:13px; color:#6b7280; font-weight:normal;">/ 自己紹介</span></h2>
+                <div class="profile-card">
+                    <p style="font-weight: 800; font-size: 17px; color: #4c1d95; margin-bottom: 10px;">渡邊 佳菜美（大学2年生）</p>
+                    <p>高校生の際に本格的なアプリやシステムの制作を行ったことで、プログラミングを使ったものづくりの楽しさと達成感を知り、将来はそれを仕事として取り組んでいきたいと思いました。経験や知識はまだ浅いものの、ハッカソンなどで優秀賞や企業賞を受賞したりなど、好奇心と積極性をもってプログラミングの勉強を行っています。</p>
+                </div>
+
+                <!-- スキル -->
+                <h2>Skills <span style="font-size:13px; color:#6b7280; font-weight:normal;">/ 技術スタック</span></h2>
+                <div class="skills-container">
+                    <div class="skill-box">
+                        <h4>プログラミング言語</h4>
+                        <span class="tag tag-primary">Python (3年~)</span>
+                        <span class="tag tag-primary">C#</span>
+                        <span class="tag tag-primary">C言語</span>
+                    </div>
+                    <div class="skill-box">
+                        <h4>フレームワーク / ツール</h4>
+                        <span class="tag">.NET MAUI</span>
+                        <span class="tag">PowerApps</span>
+                        <span class="tag">Power Automate</span>
+                    </div>
+                    <div class="skill-box">
+                        <h4>環境 / その他</h4>
+                        <span class="tag">Visual Studio 2022</span>
+                        <span class="tag">VS Code</span>
+                        <span class="tag">Git</span>
+                        <span class="tag">Firebase</span>
+                    </div>
+                </div>
+
+                <!-- 制作実績 -->
+                <h2>Projects <span style="font-size:13px; color:#6b7280; font-weight:normal;">/ 開発実績</span></h2>
+
+                <!-- アプリ 1 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-title">① Minami High School App</div>
+                        <div class="project-meta">
+                            <span><strong>開発期間:</strong> 約3ヶ月 (高校時代)</span>
+                            <span><strong>担当範囲:</strong> 企画・デザイン・フロント・バックエンド一式</span>
+                        </div>
+                    </div>
+                    <p><strong>概要:</strong> 自校の文化祭で、各クラスの催しの待ち時間をスマホ上に可視化しつつ、催し物の検索や、劇などの公演開始前にリマインド通知を受け取れるアプリです。紙のパンフレットの制作数を大幅に削減し、来場者の利便性向上に貢献しました。</p>
+                    
+                    <div class="tech-stack">
+                        <strong>使用技術:</strong>
+                        <span class="tag">C#</span>
+                        <span class="tag">.NET MAUI</span>
+                        <span class="tag">Visual Studio 2022</span>
+                        <span class="tag">Firebase</span>
+                    </div>
+
+                    <h3>💡 搭載機能とこだわり</h3>
+                    <ul>
+                        <li><strong>待ち時間リアルタイム表示:</strong> Firebaseを用いたクラス代表者からのデータ連動。</li>
+                        <li><strong>推し出し物検索:</strong> クラス名だけでなく、企画内容から瞬時に検索可能なUI。</li>
+                        <li><strong>スマートリマインド:</strong> 公演5分前に通知を送る機能を実装。「開始時刻を過ぎた公演」を登録しようとするとエラーを表示するバリデーションを組み込み、ユーザーの混乱を防ぎました。</li>
+                    </ul>
+
+                    <h3>🛠️ 技術的課題と解決のプロセス</h3>
+                    <ul>
+                        <li><strong>配信制約の突破:</strong> ストア公開ではなくリンク配布だったため、開催期間中のアップデートが困難でした。そこで、プログラム内に日付判定ロジックを実装。1日目と2日目で異なるコンテンツが自動で表示されるよう事前に設計し、運用の安定性を確保しました。</li>
+                        <li><strong>環境のシフト:</strong> 当初PowerAppsを検討するも、一般客の利便性を考え、より自由度の高い「.NET MAUI (C#)」へ自ら環境を切り替え、ネイティブアプリ化を実現しました。</li>
+                    </ul>
+
+                    <video width="1000" controls>
+                        <source src="Minami_High_School_App.mp4" type="video/mp4">
+                    </video>
+                </div>
+
+                <!-- アプリ 2 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-title">② ～自習室の利用状況～ Checkアプリ</div>
+                        <div class="project-meta">
+                            <span><strong>開発期間:</strong> 約3ヶ月</span>
+                            <span><strong>担当範囲:</strong> 企画・デザイン・フロント・バックエンド一式</span>
+                        </div>
+                    </div>
+                    <p><strong>概要:</strong> 外から空き具合が分からない構造になっていた学校の自習室の課題を解決するシステム。スマホ上で事前に空席状況を確認できるようにし、学生の無駄足をなくすとともに、利用者の偏りを分散させて全体的な利用率を向上させました。</p>
+                    
+                    <div class="tech-stack">
+                        <strong>使用技術:</strong>
+                        <span class="tag">PowerApps</span>
+                        <span class="tag">Power Automate (Powerflow)</span>
+                        <span class="tag">Microsoft Forms</span>
+                        <span class="tag">Excel</span>
+                    </div>
+
+                    <h3>こだわり・工夫した点</h3>
+                    <ul>
+                        <li><strong>直感的なUI設計:</strong> 目に優しく、かつパッと見て現在の空席状況が直感的に理解できる色遣いや、アイコンの配置を追求しました。</li>
+                        <li><strong>運用・保守性の考慮:</strong> 先生方の「利用時間を把握したい」という要望をFormsの送信状況と連動させることで解決。また、このシステムを将来引き継ぐ後輩たちが迷わないよう、あえてシンプルで綺麗な構造に仕上げました。</li>
+                    </ul>
+
+                    <div class="media-area">
+                        <i class="fa-solid fa-image"></i>
+                        <div class="media-title">フロー構造写真＆紹介動画 掲載エリア</div>
+                        <div class="media-desc">※ここにPower Automateのシステム構造写真や、動作動画を掲載できます</div>
+                    </div>
+                </div>
+
+                <!-- アプリ 3 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-title">③ まちあいさがし <span class="badge-award"><i class="fa-solid fa-trophy"></i> ハッカソン優秀賞・企業賞</span></div>
+                        <div class="project-meta">
+                            <span><strong>開発期間:</strong> 2日間</span>
+                            <span><strong>担当範囲:</strong> バックエンド開発</span>
+                        </div>
+                    </div>
+                    <p><strong>概要:</strong> ハッカソンにて2日間の超短期集中で開発したプロダクトです。技術力とアイデアの独自性が評価され、見事<strong>優秀賞</strong>および<strong>企業賞</strong>を受賞しました。</p>
+                    
+                    <div class="tech-stack">
+                        <strong>使用技術:</strong>
+                        <span class="tag tag-primary">Python</span>
+                        <span class="tag">Topaz.dev 掲載技術スタック参照</span>
+                    </div>
+
+                    <h3>こだわり・工夫した点</h3>
+                    <ul>
+                        <li>短期間の開発において、システムの基盤を支えるロジックを正確かつ迅速に構築しました。</li>
+                        <li><strong>見せ方の工夫:</strong> 常時起動が難しいWebサイトの実績を伝えるため、ポートフォリオ上には動作画面のスクリーンショットや、簡単な解説アニメーションを載せる枠を想定しています。</li>
+                    </ul>
+                </div>
+
+                <!-- アプリ 4 -->
+                <div class="project-card" style="background-color: #f9fafb; border-style: dashed; padding: 20px; text-align: center; color: #9ca3af;">
+                    <span style="font-weight: 700;">④ Project #4 （現在新しく開発中！）</span>
+                </div>
+
+                <!-- お問い合わせ -->
+                <div class="contact-section">
+                    <p style="color: #4c1d95; font-size: 16px; margin-bottom: 10px;"><i class="fa-solid fa-paper-plane"></i> Contact / Links</p>
+                    <p>メールアドレス: (あなたのメールアドレスを記入)</p>
+                    <p>GitHub: (あなたのGitHub URLを記入)</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
