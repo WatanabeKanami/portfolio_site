@@ -121,6 +121,33 @@
         .footer-contact a { color: #0369a1; text-decoration: none; font-weight: bold; }
         .footer-contact a:hover { text-decoration: underline; }
 
+       /* ==========================================
+          箇条書き（リスト）のデザイン調整
+          ========================================== */
+       .project-card ul {
+           margin: 0 0 24px 0;   /* 下に少し広めの余白を取る */
+           padding-left: 20px;   /* 左側のインデントを調整 */
+       }
+
+       .project-card li {
+           font-size: 15px;      /* 文字の大きさを調整 */
+           line-height: 1.8;     /* 行間を広げて読みやすくする */
+           margin-bottom: 12px;  /* 箇条書きの項目同士の間隔を広げる */
+           color: #2d3748;       /* 文字色を統一 */
+       }
+
+       /* 💡や🛠️ などのアイコン付き見出しの調整 */
+       .project-card h3 {
+           font-size: 16px;
+           color: #1e3a8a;
+           margin-top: 28px;     /* 上のコンテンツとの間隔を確保 */
+           margin-bottom: 14px;  /* 下のリストとの間隔 */
+           font-weight: 700;
+           display: flex;
+           align-items: center;
+           gap: 6px;             /* アイコンと文字の間の隙間 */
+       }
+
         /* 自己紹介カード */
         .profile-card {
             background-color: #fdf2f8; /* ほんのりピンク */
