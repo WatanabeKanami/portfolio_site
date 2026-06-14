@@ -63,7 +63,7 @@
                     <div class="project-header">
                         <div class="project-title">① Minami High School App</div>
                         <div class="project-meta">
-                            <span><strong>開発期間:</strong> 約3ヶ月 (高校時代)</span>
+                            <span><strong>開発期間:</strong> 約3ヶ月 (2024/6～2024/9)</span>
                             <span><strong>担当範囲:</strong> 企画・デザイン・フロント・バックエンド一式</span>
                         </div>
                     </div>
@@ -116,9 +116,9 @@
 
                     <h3>💡 搭載機能とこだわり</h3>
                     <ul>
-                        <li><strong>リアルタイム空席ジャッジ:</strong> Microsoft Formsの送信状況から、現在の空き席数を裏側で自動で判断・集計する仕組みを構築。</li>
+                        <li><strong>リアルタイム空席ジャッジ:</strong> Microsoft Formsの送信状況から、現在の空き席数を自動で集計、判断する仕組みを構築。また、先生方の「利用者の具体的な利用時間帯を把握したい」という要望もこのシステムのおかげで解決。</li>
                         <li><strong>後輩に引き継ぐサステナブル設計:</strong> 管理を引き継ぐ後輩がメンテナンス時に迷わないよう、極力シンプルな構造を維持しました。</li>
-                        <li><strong>目に優しい直感UI:</strong> 長時間利用する学生や管理者のストレスを減らすため、色遣いや要素の配置に徹底的にこだわり、直感的に空き状況がわかるUIを追求しました。</li>
+                        <li><strong>直感的なUI設計:</strong> 長時間利用する学生や管理者のストレスを減らすため、色遣いや要素の配置に徹底的にこだわり、直感的に空き状況がわかるUIを追求しました。</li>
                     </ul>
 
                     <h3>🛠️ 技術的課題と解決のプロセス</h3>
@@ -137,14 +137,14 @@
                         <div class="project-title">③ まちあいさがし <span class="badge-award"><i class="fa-solid fa-trophy"></i> ハッカソン優秀賞・企業賞</span></div>
                         <div class="project-meta">
                             <span><strong>開発期間:</strong> 2日間</span>
-                            <span><strong>担当範囲:</strong> バックエンド開発</span>
+                            <span><strong>担当範囲:</strong> バックエンド開発、画像処理パイプライン設計</span>
                         </div>
                     </div>
                     <p><strong>概要:</strong> 飲食店のテーブル等に置かれているQRコードを読み取るだけで、その店舗専用の間違い探しゲームが遊べるWebアプリ。スマートフォンの画面を見がちな料理の待ち時間を「店ならではの楽しい体験」に変えつつ、プレイ後にはおすすめメニューを自然に訴求する新しい来店体験を生み出します。</p>
-                    
+    
                     <h3>💡 搭載機能とこだわり</h3>
                     <ul>
-                        <li><strong>手軽なノーコード導入（店舗側）:</strong> 店舗名・ジャンル・おすすめメニュー情報（写真や紹介文）を入れるだけで、専用のQRコードを即座に発行。AIがバックグラウンドでベース画像と間違い用画像を自動生成するため、運用の負担を最小限に抑えています。</li>
+                        <li><strong>手軽なノーコード導入（店舗側）:</strong> 店舗名・ジャンル・おすすめメニュー情報を入力するだけで、専用のQRコードを即座に発行。AIがバックグラウンドでベース画像と間違い用画像を自動生成するため、運用の負担を最小限に抑えています。</li>
                         <li><strong>ストレスフリーな操作性（顧客側）:</strong> アプリのインストールが不要なブラウザ駆動。ピンチ操作による画像の拡大ができ、2枚の画像が連動してスクロール・ズームする高度なUIを実装し、細部まで快適に遊べるようこだわりました。</li>
                         <li><strong>価値ある導線設計:</strong> 間違い探しの題材自体をおすすめメニューにすることで、楽しんでもらいながら自然と店舗の魅力を刷り込み、結果画面のスコア表示とともにメニュー発信へ繋げる仕組みを実現しました。</li>
                     </ul>
@@ -153,9 +153,13 @@
                     <ul>
                         <li><strong>生成AIとアルゴリズムのハイブリッド連携:</strong> 毎回異なる間違いを自動生成するため、AI画像生成と古典的な画像処理アルゴリズムを融合。OpenAI APIによるベース画像生成後、「Flood fill」による領域分割とGPT-4o Visionによるラベリングを行い、インペイント技術によって自然な差分（間違い箇所）を作るパイプラインを構築。変更箇所の中心座標とサイズをデータベースに自動記録する仕組みを完成させました。</li>
                         <li><strong>ユーザー体験を担保するアーキテクチャへの転換:</strong> 当初は「Groq APIによる高速生成」と「プレイ時のリアルタイムインペイント生成」を構想していましたが、イラスト品質の安定性と、生成にかかる数十秒のラグがお客さんをさらに待たせてしまうという課題に直面。そこで方針を180度切り替え、店舗が事前に一括生成・登録しておく「事前配信方式」へとアーキテクチャを変更し、プレイ時の即時表示と品質の安定性を担保しました。</li>
+                        <li><strong>バックエンド開発者としての設計工夫:</strong> 2日間のハッカソンという限られた時間の中で、フロントエンドとの密な連携（疎結合なAPI設計）を意識。FastAPIの自動ドキュメント生成（Swagger UI）をフル活用してスキーマの齟齬を極限まで減らし、画像生成パイプラインの非同期処理化により、APIのレスポンス性能を落とさない強固な設計を行いました。</li>
                     </ul>
 
-                    <h4 style="color: #4c1d95; margin-top: 25px;"><i class="fa-solid fa-layer-group"></i> 技術スタック</h4>
+                    <a href="https://topaz.dev/projects/190abe085b004f648b7d#%E3%83%A6%E3%83%BC%E3%82%B9%E3%82%B1%E3%83%BC%E3%82%B9" target="_blank" rel="noopener noreferrer" class="topaz-heading-link">
+                        <i class="fa-solid fa-layer-group"></i> Topa'z 掲載技術スタック参照 <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 11px; margin-left: 4px;"></i>
+                    </a>
+    
                     <div class="table-responsive">
                         <table>
                             <thead>
@@ -190,8 +194,8 @@
                 <!-- お問い合わせ -->
                 <div class="contact-section">
                     <p style="color: #4c1d95; font-size: 16px; margin-bottom: 10px;"><i class="fa-solid fa-paper-plane"></i> Contact / Links</p>
-                    <p>メールアドレス: (あなたのメールアドレスを記入)</p>
-                    <p>GitHub: (あなたのGitHub URLを記入)</p>
+                    <p>メールアドレス: copengin-w05@softbank.ne.jp</p>
+                    <p>GitHub: https://github.com/WatanabeKanami</p>
                 </div>
 
             </div>
