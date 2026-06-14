@@ -177,13 +177,13 @@
 
         /* 動画・写真ギャラリー枠 */
        .project-video {
-       　　　width: 100%;
-           　max-width: 500px;
-           　height: auto;
-           　display: block;
-           　margin: 20px auto;
-           　border-radius: 12px;
-       　}
+           display: block;
+           margin: 20px auto;
+           width: 50%;
+           max-width: 500px;
+           height: auto;
+           border-radius: 12px;
+       }
 
         .media-area {
             background-color: #fffbeb;
