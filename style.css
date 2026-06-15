@@ -306,6 +306,31 @@
             vertical-align: middle;
         }
 
+       /* ==========================================
+          動画の上のラベル（説明文）
+          ========================================== */
+       .video-label {
+           font-size: 14px;
+           font-weight: 800;      /* 太字で強調 */
+           color: #475569;        /* 落ち着いたグレー */
+           background-color: #f1f5f9; /* ほんのり薄い背景 */
+           display: inline-block; /* 文字の長さに背景を合わせる */
+           padding: 4px 12px;
+           border-radius: 20px;   /* 角丸にして可愛い雰囲気に */
+           margin-bottom: 12px;   /* 動画との隙間 */
+           border: 1px solid #e2e8f0;
+       }
+
+       /* 動画コンテナ自体の調整（中央寄せ） */
+       .video-container {
+           text-align: center;
+           margin-top: 30px;
+           padding: 20px;
+           background: #fcfcfc;
+           border-radius: 20px;
+           border: 1px solid #f1f5f9;
+       }
+
         /* 連絡先フッター */
         .contact-section {
             background: linear-gradient(135deg, #fef3c7 0%, #fdf2f8 100%);
