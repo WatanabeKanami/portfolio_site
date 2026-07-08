@@ -1,4 +1,4 @@
-/* 全体のリセットと基本定義 */
+       /* 全体のリセットと基本定義 */
         *, *::before, *::after {
             box-sizing: border-box;
         }
@@ -215,6 +215,7 @@
             background-color: #ffffff;
             border-radius: 20px;
             padding: 30px;
+            margin-top: 20px;
             margin-bottom: 35px;
             border: 1px solid #e2e8f0;
             box-shadow: 0 4px 15px rgba(0,0,0,0.02);
@@ -334,11 +335,13 @@
         /* 連絡先フッター */
         .contact-section {
             background: linear-gradient(135deg, #fef3c7 0%, #fdf2f8 100%);
-            border-radius: 16px;
-            padding: 30px;
-            text-align: center;
-            margin-top: 40px;
-            border: 1px solid #fbcfe8;
+            max-width:900px;
+            margin:60px auto;
+            padding:40px;
+            border-radius:24px;
+            background:#fdf2f8;
+            border:1px solid #fbcfe8;
+            box-shadow:0 4px 15px rgba(0,0,0,0.03);
         }
 
         .contact-section p {
@@ -347,53 +350,55 @@
             font-size: 15px;
         }
 
-       /* ===============================
-   セクションナビ
-================================ */
-
-.section-nav{
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-    gap:15px;
-
-    padding:18px;
-
-    background:#ffffff;
-
-    border-bottom:1px solid #e5e7eb;
-
-    position:sticky;
-    top:0;
-    z-index:100;
-}
-
-.section-nav a{
-
-    text-decoration:none;
-
-    color:#4c1d95;
-
-    background:#f3e8ff;
-
-    padding:10px 18px;
-
-    border-radius:999px;
-
-    font-weight:700;
-
-    transition:.25s;
-}
-
-.section-nav a:hover{
-
-    background:#6ee7b7;
-
-    color:white;
-
-    transform:translateY(-2px);
-}
-
-html{
-    scroll-behavior:smooth;
-}
+       /*==================================
+        ナビゲーションタブ
+       ==================================*/
+       
+       .menu-tab{
+           display:flex;
+           justify-content:center;
+           align-items:center;
+           background:#ffffff;
+           border-bottom:2px solid #e2e8f0;
+       }
+       
+       .menu-tab a{
+       
+           flex:1;
+       
+           text-align:center;
+       
+           text-decoration:none;
+       
+           color:#4c1d95;
+       
+           font-weight:700;
+       
+           padding:18px 0;
+       
+           transition:0.3s;
+       
+           border-right:1px solid #e2e8f0;
+       }
+       
+       .menu-tab a:last-child{
+           border-right:none;
+       }
+       
+       .menu-tab a:hover{
+       
+           background:#f3e8ff;
+       
+           color:#6b21a8;
+       }
+       
+       .menu-tab .active{
+       
+           background:#e9d5ff;
+       
+           color:#4c1d95;
+       }
+       
+       html{
+           scroll-behavior:smooth;
+       }
