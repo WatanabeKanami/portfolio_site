@@ -403,25 +403,57 @@
        .hackathon-bubble{
        
            position: relative;
+
+           margin-top: 18px;
        
-           margin-top:20px;
+           background: #ffffff;
        
-           background:#ffffff;
+           border: 2px solid #d8b4fe;
        
-           border:2px solid #c4b5fd;
+           border-radius: 18px;
        
-           border-radius:18px;
+           padding: 18px;
        
-           padding:15px;
+           max-width: 250px;
        
-           font-size:14px;
+           text-align: center;
        
-           line-height:1.8;
-       
-           text-align:left;
-       
-           box-shadow:0 4px 10px rgba(0,0,0,.05);
-       
+           box-shadow: 0 8px 20px rgba(76,29,149,.08);
+
+           /* 外側（三角の枠） */
+              .speech-bubble::before{
+                  content: "";
+              
+                  position: absolute;
+              
+                  top: -18px;
+              
+                  left: 50%;
+              
+                  transform: translateX(-50%);
+              
+                  border-left: 16px solid transparent;
+                  border-right: 16px solid transparent;
+                  border-bottom: 18px solid #d8b4fe;
+              }
+              
+              /* 内側（白い三角） */
+              .speech-bubble::after{
+                  content: "";
+              
+                  position: absolute;
+              
+                  top: -15px;
+              
+                  left: 50%;
+              
+                  transform: translateX(-50%);
+              
+                  border-left: 14px solid transparent;
+                  border-right: 14px solid transparent;
+                  border-bottom: 16px solid #ffffff;
+              }
+              
        }
        
        /* 吹き出しの三角 */
